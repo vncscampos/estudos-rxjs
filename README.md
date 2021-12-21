@@ -1,27 +1,35 @@
-# Rxjs
+# RxJS com Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+## O que é
+Uma biblioteca que permite criar programas assíncronos e baseados em evento através de Observables.
 
-## Development server
+## Principais Termos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Observables
+- Qualquer stream de dados. 
+- Um conjunto de valores.
+- Emite um número finito ou infinito de valores.
 
-## Code scaffolding
+### Observer 
+- Observa a stream.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+~~~typescript
+interface Observer<T> {
+  next: (value: T) => void
+  error: (err: any) => void
+  complete: () => void
+}
+~~~
 
-## Build
+### Subscriber
+- Um observer que pode ser unsubscribe
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Subscription
+- Representa uma execução de um Observable
+- subscribe() retorna uma Subscription
 
-## Running unit tests
+### Principais Operadores
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Documentaçao
+https://rxjs.dev/
